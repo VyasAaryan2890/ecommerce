@@ -471,6 +471,11 @@ th:last-child{
     .cart-info p{
         display: none;
     }
+    .td input{
+        width: 40px;
+        height: 30px;
+        padding: 5px;
+    }
 }
 @media (max-width:450px){
     .row{
