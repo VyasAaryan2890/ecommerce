@@ -31,80 +31,42 @@
     </div>
 </div>
 
-<!------------------------cart item--------------------------->
 
-<div class="small-container cart-page">
-    <table>
-        <tr>
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Subtotal</th>
-        </tr>
-        <tr>
-            <td>
-                <div class="cart-info">
-                    <img src="images/buy-1.jpg" alt="">
-                    <div>
-                        <p>Printed T-Shirt</p>
-                        <small>399RS</small><br>
-                        <a href="#">Remove</a>
-                    </div>
-                </div>
-            </td>
-            <td><input type="number" value="1"></td>
-            <td>399RS</td>
-        </tr>
-        <tr>
-            <td>
-                <div class="cart-info">
-                    <img src="images/buy-2.jpg" alt="">
-                    <div>
-                        <p>Printed T-Shirt</p>
-                        <small>599RS</small><br>
-                        <a href="#">Remove</a>
-                    </div>
-                </div>
-            </td>
-            <td><input type="number" value="1"></td>
-            <td>399RS</td>
-        </tr>
-        <tr>
-            <td>
-                <div class="cart-info">
-                    <img src="images/buy-3.jpg" alt="">
-                    <div>
-                        <p>Printed T-Shirt</p>
-                        <small>299RS</small><br>
-                        <a href="#">Remove</a>
-                    </div>
-                </div>
-            </td>
-            <td><input type="number" value="1"></td>
-            <td>399RS</td>
-        </tr>
-    </table>
+<!---------------------------account-page-------------------->
 
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/image1.png" alt="" width="100%">
+            </div>
+            <div class="col-2">
+                <div class="from-container">
+                    <div class="from-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="indicator">
+                    </div>
 
-    <div class="total-price">
-        <table>
-            <tr>
-                <td>Subtotal</td>
-                <td>1200rs</td>
-            </tr>
-            <tr>
-                <td>Tax</td>
-                <td>200rs</td>
-            </tr>
-            <tr>
-                <td>Total</td>
-                <td>1000rs</td>
-            </tr>
-        </table>
+                    <form id="loginfrom">
+                        <input type="text" placeholder="Username" required>
+                        <input type="password" placeholder="Password" required>
+                        <button type="submit" class="btn">Login</button>
+                        <a href="#">Forgot Password</a>
+                    </form>
+
+                    <form id="regfrom">
+                        <input type="text" placeholder="Username" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Password" required>
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
-
-
 
 <!------------------------footer------------------------------>
 
@@ -164,6 +126,27 @@
         else {
             MenuItem.style.maxHeight = "0px"
         }
+    }
+</script>
+
+
+<!------------------------js for form--------------------->
+
+<script>
+    var loginfrom = document.getElementById("loginfrom");
+    var regfrom = document.getElementById("regfrom");
+    var indicator = document.getElementById("indicator");
+
+    function register(){
+        regfrom.style.transform = "translateX(0px)";
+        loginfrom.style.transform ="translate(0px)";
+        indicator.style.transform ="translate(100px)";
+    }
+
+    function login(){
+        regfrom.style.transform = "translateX(300px)";
+        loginfrom.style.transform ="translate(300px)";
+        indicator.style.transform ="translate(0px)";
     }
 </script>
 </body>
